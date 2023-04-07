@@ -42,13 +42,9 @@
                                 <td>{{ $item->price }}</td>
                             </tr>
                         @endforeach
-                        {{-- {{ $totalHarga=
-                        @foreach ($products as $item)
-                            {{ $item->price +  }}
-                        @endforeach }}
                         <tr>
-                            <td>Total Harga: {{ echo $totalHarga }}</td>
-                        </tr> --}}
+                            <td>Total Harga: </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -14,10 +14,10 @@
                 <div class="card-title">
                     <h3>Category: {{ $item->name }}</h3>
                 </div>
-                <a href="product/{{ $item->id }}/edit">
+                <a href="category/{{ $item->id }}/edit">
                     <button class="btn btn-warning mt-2" type="button">Edit</button>
                 </a>
-                <a href="product/{{ $item->id }}/delete">
+                <a href="category/{{ $item->id }}/delete">
                     <button class="btn btn-danger mt-2" type="button">Delete</button>
                 </a>
             </div>
