@@ -47,12 +47,12 @@
             @foreach ($categories as $item)
                 <option value="{{ $item->id }}">{{ $item->id }} - {{ $item->name }}</option>
             @endforeach
+            @error('category_id')
+                <div class="invalid-feedback">
+                    Pilih Kategori
+                </div>
+            @enderror
         </select>
-        @error('category_id')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-        @enderror
         <button type="submit" class="btn btn-primary mt-2">Add</button> <br>
         <a href="{{ url('product') }}">
             <button class="btn btn-danger mt-2" type="button">Back</button>
