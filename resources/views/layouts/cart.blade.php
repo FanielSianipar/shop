@@ -31,26 +31,26 @@
                 <table class="table table-bordered" style="width: 40vw">
                     <thead class="table table-primary" style="text-align: center">
                         <tr>
-                            <th scope="col" style="min-width: 8px; max-width: 20px">No.</th>
+                            <th scope="col" style="min-width: 8px; max-width: 15px">No.</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Price</th>
+                            <th scope="col" style="min-width: 120px; max-width: 200px">Price</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($products as $item)
                             <tr>
                                 <th scope="row" style="text-align: center">
-                                    {{ $loop->iteration }}
+                                    {{ $loop->iteration }}.
                                 </th>
                                 <td style="padding-left: 20px">{{ $item->name }}</td>
-                                <td style="text-align: center">{{ $item->price }}</td>
+                                <td style="text-align: center">Rp{{ $item->price }}</td>
                             </tr>
                         @endforeach
                         <tr style="text-align:center">
-                            <td  colspan="2">
+                            <th  colspan="2">
                                 Total Harga :
-                            </td>
-                            <td>
+                            </th>
+                            <th>
                                 @php
                                     $total = 0;
                                 @endphp
@@ -59,8 +59,8 @@
                                         $total += $item->price;
                                     @endphp
                                 @endforeach
-                                {{ $total }}
-                            </td>
+                                Rp{{ $total }}
+                            </th>
                         </tr>
                     </tbody>
                 </table>
