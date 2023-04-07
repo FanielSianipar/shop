@@ -50,12 +50,12 @@
         </select>
         @error('category_id')
             <div class="invalid-feedback">
-                Pilih salah satu Kategori
+                {{ $message }}
             </div>
         @enderror
         <button type="submit" class="btn btn-primary mt-2">Add</button> <br>
         <a href="{{ url('product') }}">
-            <button class="btn btn-danger mt-2" type="button">Cancel</button>
+            <button class="btn btn-danger mt-2" type="button">Back</button>
         </a>
     </form>
 @endsection

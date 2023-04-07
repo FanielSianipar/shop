@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('carts', function (Blueprint $table) {
             $table->foreignId('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

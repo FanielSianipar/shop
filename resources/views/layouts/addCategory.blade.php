@@ -11,13 +11,13 @@
             <div class="form-text">Nama Kategori tidak boleh lebih dari 255 karakter</div>
             @error('category_name')
                 <div class="invalid-feedback">
-                    Nama Kategori tidak boleh kosong
+                    {{ $message }}
                 </div>
             @enderror
         </div>
         <button type="submit" class="btn btn-primary mt-2">Add</button> <br>
         <a href="{{ url('category') }}">
-            <button class="btn btn-danger mt-2" type="button">Cancel</button>
+            <button class="btn btn-danger mt-2" type="button">Back</button>
         </a>
     </form>
 @endsection

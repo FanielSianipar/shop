@@ -13,7 +13,7 @@
             <div class="form-text">Nama produk tidak boleh lebih dari 255 karakter</div>
             @error('product_name')
                 <div class="invalid-feedback">
-                    Nama tidak boleh kosong
+                    {{ $message }}
                 </div>
             @enderror
         </div>
@@ -61,7 +61,7 @@
         @enderror
         <button type="submit" class="btn btn-primary mt-2">Save</button> <br>
         <a href="{{ url('product') }}">
-            <button class="btn btn-danger mt-2" type="button">Cancel</button>
+            <button class="btn btn-danger mt-2" type="button">Back</button>
         </a>
     </form>
 @endsection
