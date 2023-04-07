@@ -8,6 +8,7 @@
         <div class="row">
             <div class="col-md-7">
                 <h1>Product</h1>
+                <hr>
                 @foreach ($products as $item)
                     <div class="card mb-3" style="min-width:20vw; max-width:50vw">
                         <div class="card-body">
@@ -28,6 +29,7 @@
 
             <div class="col-md-4">
                 <h1>Cart</h1>
+                <hr>
                 <table class="table table-bordered" style="width: 40vw">
                     <thead class="table table-primary" style="text-align: center">
                         <tr>
