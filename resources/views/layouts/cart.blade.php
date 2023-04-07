@@ -31,22 +31,35 @@
                 <table class="table table-bordered" style="width: 40vw">
                     <thead class="table table-primary" style="text-align: center">
                         <tr>
+                            <th scope="col" style="min-width: 8px; max-width: 20px">No.</th>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
-                            <th scope="col">dsaidasisad</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($products as $item)
                             <tr>
-                                <td>{{ $item->name }}</td>
-                                <td>{{ $item->price }}</td>
+                                <th scope="row" style="text-align: center">
+                                    {{ $loop->iteration }}
+                                </th>
+                                <td style="padding-left: 20px">{{ $item->name }}</td>
+                                <td style="text-align: center">{{ $item->price }}</td>
                             </tr>
                         @endforeach
-                        <tr>
-                            <td>Total Harga: @foreach ($products as $item)
-                                    {{ $item->price }} +
+                        <tr style="text-align:center">
+                            <td  colspan="2">
+                                Total Harga :
+                            </td>
+                            <td>
+                                @php
+                                    $total = 0;
+                                @endphp
+                                @foreach ($products as $item)
+                                    @php
+                                        $total += $item->price;
+                                    @endphp
                                 @endforeach
+                                {{ $total }}
                             </td>
                         </tr>
                     </tbody>
