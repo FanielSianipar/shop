@@ -33,6 +33,7 @@
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
+                            <th scope="col">dsaidasisad</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,7 +44,10 @@
                             </tr>
                         @endforeach
                         <tr>
-                            <td>Total Harga: </td>
+                            <td>Total Harga: @foreach ($products as $item)
+                                    {{ $item->price }} +
+                                @endforeach
+                            </td>
                         </tr>
                     </tbody>
                 </table>
