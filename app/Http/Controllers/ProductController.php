@@ -56,7 +56,7 @@ class ProductController extends Controller
             'category_id' => $validated['category_id']
         ]);
 
-        return redirect('product/addProduct');
+        return redirect('product');
     }
 
     /**

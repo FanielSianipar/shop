@@ -44,8 +44,8 @@
         </div>
         <select class="form-select @error('category_id') is-invalid @enderror" name="category_id">
             <option selected>Pilih Kategori Produk</option>
-            @foreach ($categories as $item)
-                <option value="{{ $item->id }}">{{ $item->id }} - {{ $item->name }}</option>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->id }} - {{ $category->name }}</option>
             @endforeach
             @error('category_id')
                 <div class="invalid-feedback">
