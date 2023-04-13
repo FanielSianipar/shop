@@ -4,7 +4,7 @@
 
 @section('content')
     <form action="/product/{{ $product->id }}" method="POST">
-        @method("PUT")
+        @method('PUT')
         @csrf
         <div class="mb-3">
             <label class="form-label">Nama Produk</label>
